@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMA | PLC Programming, SCADA & Robotics Integration Firm</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="AUTOMA is a premier engineering firm specializing in mission-critical PLC programming, SCADA architecture, robotics integration, and turnkey automated control systems.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                <span>AUTOMA</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="pricing.html">Integration Tiers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-btn" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="rtl-toggle" class="btn btn-secondary"
+                    style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
+                <a href="contact.html" class="btn btn-primary" style="padding: 8px 16px;">Project Enquiry</a>
+            </div>
+            <button id="mobile-hamburger" class="hamburger"><i data-lucide="menu"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="pricing.html">Integration Tiers</a>
+            <a href="contact.html">Contact</a>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 0; padding-bottom: 4px;">
+                <a href="contact.html" class="btn btn-primary">Project Enquiry</a>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 35px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Industrial Automation & Mission-Critical PLC Engineering</h1>
+                <p>Architecting high-availability PLC logic, enterprise SCADA telemetry, and multi-axis robotics integration engineered for maximum throughput, zero downtime, and plant-wide intelligence.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Enquire About a Project</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Engineering Capabilities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES / CAPABILITIES -->
+        <section id="services">
+            <div class="container">
+                <div class="section-title">
+                    <p>Core Capabilities</p>
+                    <h2>Advanced Automation & Control Engineering</h2>
+                </div>
+                <div class="grid grid-responsive grid-flex">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" alt="PLC Programming & Logic Architecture" class="card-img">
+                        <h3>PLC Programming & Logic Architecture</h3>
+                        <p>Certified logic design in Allen-Bradley Studio 5000, Siemens TIA Portal, Beckhoff TwinCAT, and Schneider EcoStruxure with IEC 61131-3 modular standards.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="SCADA & HMI Visualization" class="card-img">
+                        <h3>SCADA & Plant Telemetry Systems</h3>
+                        <p>Enterprise visualization on Inductive Automation Ignition, AVEVA Wonderware, FactoryTalk View, and WinCC with real-time analytics and SQL database historization.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=800" alt="Robotics & Motion Integration" class="card-img">
+                        <h3>Robotics & Motion Control Integration</h3>
+                        <p>Seamless kinematics programming for Fanuc, ABB, KUKA, and Yaskawa robotic arms, multi-axis servo synchronization, and Cognex machine vision guidance.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800" alt="Control Panel Design & Commissioning" class="card-img">
+                        <h3>UL 508A Control Panels & Commissioning</h3>
+                        <p>Full CAD schematic design, custom UL 508A panel fabrication, factory acceptance testing (FAT), site acceptance testing (SAT), and 24/7 on-site commissioning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / EDGE -->
+        <section id="about" style="background: var(--card);">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div class="about-content">
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 10px;">THE AUTOMA ADVANTAGE</p>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Engineered for 99.98% Uptime & Peak Operational Efficiency</h2>
+                    <p style="margin-bottom: 20px;">We engineer mission-critical automation frameworks that eliminate production bottlenecks, reduce cycle times, and safeguard operational safety. From legacy PLC migrations to ground-up smart manufacturing facilities, our certified system integrators deliver turnkey excellence.</p>
+                    <ul style="margin-bottom: 30px;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <i data-lucide="check-circle" style="color: var(--secondary);"></i> Rockwell Automation & Siemens Solution Partner Certified
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <i data-lucide="check-circle" style="color: var(--secondary);"></i> TÜV Rheinland Functional Safety & SIL-3 / Cat 4 Compliance
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="check-circle" style="color: var(--secondary);"></i> Complete Digital Twin Simulation Prior to On-Site Deployment
+                        </li>
+                    </ul>
+                    <a href="case-studies.html" class="btn btn-primary">Explore Project Highlights</a>
+                </div>
+                <div class="about-image"
+                    style="border-radius: 20px; overflow: hidden; box-shadow: 20px 20px 60px rgba(0,0,0,0.1);">
+                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+                        alt="Automation Engineering Facility" style="width: 100%; display: block;">
+                </div>
+            </div>
+        </section>
+
+        <!-- METRICS -->
+        <section id="metrics">
+            <div class="container">
+                <div class="grid grid-responsive grid-flex">
+                    <div class="card">
+                        <span class="metric-value">650+</span>
+                        <p>Automated Cells Deployed</p>
+                    </div>
+                    <div class="card">
+                        <span class="metric-value">99.98%</span>
+                        <p>PLC System Reliability Rate</p>
+                    </div>
+                    <div class="card">
+                        <span class="metric-value">40+</span>
+                        <p>Certified Automation Engineers</p>
+                    </div>
+                    <div class="card">
+                        <span class="metric-value">24/7</span>
+                        <p>Critical Plant Dispatch & SLA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" style="background: var(--card);">
+            <div class="container">
+                <div class="section-title">
+                    <p>Client Testimonials</p>
+                    <h2>Trusted by Plant Operations Leaders</h2>
+                </div>
+                <div class="grid grid-responsive grid-flex">
+                    <div class="card">
+                        <p style="font-style: italic; margin-bottom: 20px;">"AUTOMA re-architected our legacy bottling plant with a fault-tolerant Siemens S7-1500 PLC network and Ignition SCADA. They completed cutover during a 48-hour scheduled window with zero unplanned downtime and a 22% jump in line OEE."</p>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                            <div
+                                style="width: 40px; height: 40px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100"
+                                    alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="text-align: left;">
+                                <h4 style="font-size: 1rem;">Marcus Vance</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">VP of Engineering, Apex Beverage Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p style="font-style: italic; margin-bottom: 20px;">"Their robotics integration team synchronized six Fanuc robotic welding stations with our Allen-Bradley GuardLogix safety controllers flawlessly. Cycle time was reduced by 34% with complete traceability across every weld."</p>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                            <div
+                                style="width: 40px; height: 40px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100"
+                                    alt="Devon Hayes" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="text-align: left;">
+                                <h4 style="font-size: 1rem;">Devon Hayes</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.7;">Director of Manufacturing, Titan Powertrain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process">
+            <div class="container">
+                <div class="section-title">
+                    <p>Our Methodology</p>
+                    <h2>Rigorous 4-Stage Automation Engineering Process</h2>
+                </div>
+                <div class="grid grid-responsive grid-flex">
+                    <div class="card">
+                        <i data-lucide="file-code" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>1. Architecture & FDS Specification</h3>
+                        <p>Comprehensive functional design specification (FDS), IO allocation, network topology mapping, and SIL risk analysis.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="terminal" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>2. Logic Coding & Emulation</h3>
+                        <p>Structured IEC 61131-3 PLC programming with hardware-in-the-loop (HIL) digital twin simulation before deployment.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="shield-check" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>3. UL 508A Panel Build & FAT</h3>
+                        <p>Precision wiring in climate-controlled panel shop followed by rigorous 100% point-to-point Factory Acceptance Testing.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="activity" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>4. On-Site SAT & Commissioning</h3>
+                        <p>Live plant commissioning, multi-axis tuning, operator training, and 24/7 post-launch ramp-up engineering coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="background: var(--card);">
+            <div class="container">
+                <div class="section-title">
+                    <p>Frequently Asked Questions</p>
+                    <h2>Technical & Project Integration FAQs</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item active">
+                        <button class="faq-question" type="button">
+                            <span>Which PLC and PAC platforms do you support?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>We are certified experts across Rockwell / Allen-Bradley (ControlLogix, CompactLogix, GuardLogix), Siemens (S7-1500, S7-1200, ET200), Schneider Electric (Modicon M580/M340), Beckhoff TwinCAT 3, Omron Sysmac, and Mitsubishi MELSEC.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>Can you handle legacy PLC migration without extended downtime?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Yes. We specialize in hot-cutover strategies and swing-arm I/O wiring conversions (e.g., PLC-5 to ControlLogix or S5 to S7-1500) using shadow testing and digital twin pre-validation to minimize or eliminate line downtime.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>What SCADA platforms and databases do you integrate?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>We implement Inductive Automation Ignition, AVEVA Wonderware, FactoryTalk View SE, and Siemens WinCC with seamless connectivity to Microsoft SQL Server, PostgreSQL, OSIsoft PI, MQTT Sparkplug B, and ERP/MES architectures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>What functional safety certifications do your engineers hold?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>Our automation engineers hold TÜV Rheinland Functional Safety Engineer credentials and design safety systems conforming strictly to ISO 13849-1 (PLd/PLe), IEC 62061 (SIL-2/SIL-3), and NFPA 79 electrical safety standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 20px;">
+                        <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                        <span>AUTOMA</span>
+                    </a>
+                    <p style="opacity: 0.7; margin-bottom: 20px;">Turnkey industrial automation, mission-critical PLC programming, enterprise SCADA telemetry, and robotics integration for global manufacturing.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Capabilities</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="services.html">PLC Programming</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">SCADA & Telemetry</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">Robotics Integration</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Standards & Compliance</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="#">UL 508A Certified</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#">IEC 61131-3 & IEC 61508</a></li>
+                        <li><a href="#">ISO 13849 Safety Standards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Automation Technical Brief</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Receive engineering whitepapers, SCADA architecture guides, and PLC optimization strategies.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Engineering work email" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOMA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

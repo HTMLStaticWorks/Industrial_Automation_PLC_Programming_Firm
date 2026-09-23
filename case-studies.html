@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | AUTOMA - PLC Engineering Projects</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="Explore AUTOMA case studies of industrial automation projects, legacy PLC migrations, SCADA telemetry deployments, and turnkey robotic integration across high-throughput plants.">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .metric-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(217, 119, 6, 0.12);
+            color: var(--secondary);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .case-card {
+            background: var(--card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .case-content {
+            padding: 50px;
+        }
+
+        .case-image {
+            background-size: cover;
+            background-position: center;
+            min-height: 350px;
+        }
+
+        @media (max-width: 1024px) {
+            .case-card {
+                grid-template-columns: 1fr;
+            }
+
+            .case-content {
+                padding: 30px;
+            }
+
+            .case-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                <span>AUTOMA</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="case-studies.html" aria-current="page">Case Studies</a>
+                <a href="pricing.html">Integration Tiers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                <button id="rtl-toggle" class="btn btn-secondary"
+                    style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
+                <a href="contact.html" class="btn btn-primary" style="padding: 8px 16px;">Project Enquiry</a>
+            </div>
+            <button id="mobile-hamburger" class="hamburger"><i data-lucide="menu"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html" aria-current="page">Case Studies</a>
+            <a href="pricing.html">Integration Tiers</a>
+            <a href="contact.html">Contact</a>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 0; padding-bottom: 4px;">
+                <a href="contact.html" class="btn btn-primary">Project Enquiry</a>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 35px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&q=80&w=2070');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Proven Automation Case Studies</h1>
+                <p>A technical showcase of high-speed PLC engineering, SCADA plant modernization, and synchronized robotic integration across global manufacturers.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Automation Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTOR HUBS -->
+        <section class="reveal" data-animation="zoom-in" style="padding: 100px 0;">
+            <div class="container">
+                <div class="section-title">
+                    <p>ENGINEERING HIGHLIGHTS</p>
+                    <h2>Automation Projects by Industry Sector</h2>
+                </div>
+                <div class="grid grid-flex">
+                    <div class="card">
+                        <i data-lucide="cpu" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Automotive & EV</h3>
+                        <p>Turnkey robotic spot & laser welding cells, battery pack assembly lines, and high-speed servo transfer presses.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="utensils" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Food, Beverage & CPG</h3>
+                        <p>ISA-88 recipe batch control, automated sanitary CIP systems, and multi-line robotic case palletizing.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="droplet" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Water & Infrastructure</h3>
+                        <p>Distributed wide-area SCADA, hot-standby redundant PLC telemetry, and municipal pumping station optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS -->
+        <section>
+            <div class="container">
+                <!-- Project 1 -->
+                <div class="case-card">
+                    <div class="case-content mobile-center-text">
+                        <span class="metric-badge"><i data-lucide="shield-check" size="16"></i> SIL-3 Safety & Fanuc Robotics</span>
+                        <h2 style="margin-bottom: 20px;">Automotive EV Powertrain Robotic Welding Cell</h2>
+                        <p style="margin-bottom: 30px; opacity: 0.8;">Engineered a fully automated robotic welding and assembly cell for heavy aluminum EV chassis components. Implemented Allen-Bradley GuardLogix safety PLC with CIP Safety over Ethernet/IP, coordinating 4 Fanuc M-900iB robots with Cognex 3D laser vision inspection.</p>
+                        <div class="grid grid-responsive case-metrics" style="gap: 20px;">
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    -38%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Cycle Time Reduction</p>
+                            </div>
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    100%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Real-Time Weld Defect Detection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=2070');">
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="case-card" style="direction: rtl;">
+                    <div class="case-content mobile-center-text" style="direction: ltr;">
+                        <span class="metric-badge"><i data-lucide="zap" size="16"></i> Zero Unplanned Cutover Downtime</span>
+                        <h2 style="margin-bottom: 20px;">High-Speed Beverage Plant PLC-5 to ControlLogix Migration</h2>
+                        <p style="margin-bottom: 30px; opacity: 0.8;">Executed complete turnkey migration of 14 legacy Allen-Bradley PLC-5 racks to redundant 1756-L84ES GuardLogix controllers and modern Ignition SCADA across 3 bottling lines. Pre-validated logic using digital twin simulation, enabling cutover in a single weekend shutdown.</p>
+                        <div class="grid grid-responsive case-metrics" style="gap: 20px;">
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    +24%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Line OEE Improvement</p>
+                            </div>
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    1,800</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Bottles/Min Synchronized Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070');">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="case-card">
+                    <div class="case-content mobile-center-text">
+                        <span class="metric-badge"><i data-lucide="activity" size="16"></i> 45 Remote Lift Stations Connected</span>
+                        <h2 style="margin-bottom: 20px;">Municipal Water & Wastewater SCADA Modernization</h2>
+                        <p style="margin-bottom: 30px; opacity: 0.8;">Designed and commissioned a fault-tolerant SCADA network integrating Siemens S7-1500 redundant CPUs, DNP3 cellular telemetry, and dual-server Ignition SCADA with ISA-18.2 compliant alarm management and automated EPA compliance reporting.</p>
+                        <div class="grid grid-responsive case-metrics" style="gap: 20px;">
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    99.99%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Telemetry Network Availability</p>
+                            </div>
+                            <div>
+                                <h4 style="font-family: var(--font-mono); color: var(--secondary); font-size: 1.5rem;">
+                                    -42%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Nuisance Alarm Reductions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070');">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- METRIC DEEP-DIVE -->
+        <section class="reveal" data-animation="fade-left"
+            style="background: var(--primary); color: white; padding: 100px 0;">
+            <div class="container grid impact-metrics" style="text-align: center; gap: 30px;">
+                <div>
+                    <h4 style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--secondary);">650+</h4>
+                    <p style="opacity: 0.7;">Automated Cells Commissioned</p>
+                </div>
+                <div>
+                    <h4 style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--secondary);">&lt; 15ms</h4>
+                    <p style="opacity: 0.7;">Deterministic PLC Logic Scan Time</p>
+                </div>
+                <div>
+                    <h4 style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--secondary);">99.98%</h4>
+                    <p style="opacity: 0.7;">System Reliability & Uptime</p>
+                </div>
+                <div>
+                    <h4 style="font-family: var(--font-mono); font-size: 2.5rem; color: var(--secondary);">100%</h4>
+                    <p style="opacity: 0.7;">Digital Twin Pre-Commissioned</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STANDARDS LOGOS / CLOUD -->
+        <section class="reveal" data-animation="fade-in" style="padding: 100px 0; border-top: 1px solid var(--border);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Engineering Standards & Certification Compliance</h2>
+                <div class="grid media-cloud"
+                    style="opacity: 0.7; justify-items: center; text-align: center;">
+                    <h3 class="pulse" style="margin: 0;">UL 508A Certified</h3>
+                    <h3 class="pulse" style="margin: 0;">IEC 61131-3 Standard</h3>
+                    <h3 class="pulse" style="margin: 0;">ISO 13849-1 (PL e)</h3>
+                    <h3 class="pulse" style="margin: 0;">NFPA 70 & 79 Machine Safety</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 20px;">
+                        <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                        <span>AUTOMA</span>
+                    </a>
+                    <p style="opacity: 0.7; margin-bottom: 20px;">Turnkey industrial automation, mission-critical PLC programming, enterprise SCADA telemetry, and robotics integration for global manufacturing.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Capabilities</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="services.html">PLC Programming</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">SCADA & Telemetry</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">Robotics Integration</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Standards & Compliance</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="#">UL 508A Certified</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#">IEC 61131-3 & IEC 61508</a></li>
+                        <li><a href="#">ISO 13849 Safety Standards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Automation Technical Brief</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Receive engineering whitepapers, SCADA architecture guides, and PLC optimization strategies.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Work email address" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOMA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

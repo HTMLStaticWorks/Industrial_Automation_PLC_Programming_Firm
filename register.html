@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Engineering Account | AUTOMA</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            padding: 20px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            color: var(--text);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .social-auth {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text);
+        }
+
+        .social-btn:hover {
+            border-color: var(--secondary);
+            background: var(--card);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.7;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: 15px;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+        }
+
+        .auth-footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .auth-footer a {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .auth-card a:not(.logo):hover {
+            text-decoration: underline;
+        }
+
+        .auth-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper .toggle-pass {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .input-wrapper .toggle-pass:hover {
+            opacity: 1 !important;
+            color: var(--secondary);
+        }
+
+        @media (max-width: 480px) {
+            .auth-controls {
+                top: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body class="auth-body">
+    <div class="auth-controls">
+        <button id="theme-toggle" class="toggle-btn" title="Toggle Theme"><i data-lucide="moon"></i></button>
+        <button id="rtl-toggle" class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
+    </div>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="logo logo-accent" style="justify-content: center; margin-bottom: 20px;">
+                    <i data-lucide="cpu" style="color: var(--secondary);"></i><span>AUTOMA</span>
+                </a>
+                <h2>Create Engineering Account</h2>
+                <p style="opacity: 0.6;">Register for project telemetry & FAT reports</p>
+            </div>
+
+            <div class="social-auth">
+                <button class="social-btn"><img src="https://www.google.com/favicon.ico" width="18" alt="Google">
+                    Google</button>
+                <button class="social-btn"><i data-lucide="shield" size="18"></i> Enterprise SSO</button>
+            </div>
+
+            <div class="divider">OR USE WORK EMAIL</div>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" placeholder="Marcus Vance" required>
+                </div>
+                <div class="form-group">
+                    <label>Company / Plant Name</label>
+                    <input type="text" class="form-control" placeholder="Apex Heavy Equipment LLC" required>
+                </div>
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" class="form-control" placeholder="marcus@apexequip.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                        <i data-lucide="eye" class="toggle-pass" id="pass-toggle"></i>
+                    </div>
+                </div>
+                <div class="form-group"
+                    style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; opacity: 0.8;">
+                    <input type="checkbox" id="terms" required style="margin-top: 4px;">
+                    <label for="terms" style="font-weight: 400;">I agree to the <a href="#"
+                            style="color: var(--secondary);">Terms of Service</a> and <a href="#"
+                            style="color: var(--secondary);">Privacy Policy</a>.</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Create Client Account</button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Log In</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('click', function (e) {
+            const toggle = e.target.closest('#pass-toggle');
+            if (toggle) {
+                const passInput = document.getElementById('password');
+                const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passInput.setAttribute('type', type);
+                if (window.lucide) {
+                    toggle.setAttribute('data-lucide', type === 'password' ? 'eye' : 'eye-off');
+                    lucide.createIcons();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Tiers & Service Models | AUTOMA</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="Explore AUTOMA engineering engagement models, turnkey automation tiers, hardware compatibility matrix, and 24/7 plant support SLAs.">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .pricing-header {
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: var(--bg);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding-bottom: 100px;
+        }
+
+        .pricing-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.18);
+            z-index: 10;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #D97706, #FBBF24);
+            color: #FFFFFF;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 2.3rem;
+            font-family: var(--font-heading);
+            margin: 20px 0;
+            color: var(--text);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        .features-list {
+            margin: 30px 0;
+            flex: 1;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .color-swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .color-swatch {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .swatch-box {
+            height: 50px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(217, 119, 6, 0.12);
+            color: var(--secondary);
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                <span>AUTOMA</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="pricing.html" aria-current="page">Integration Tiers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                <button id="rtl-toggle" class="btn btn-secondary"
+                    style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
+                <a href="contact.html" class="btn btn-primary" style="padding: 8px 16px;">Project Enquiry</a>
+            </div>
+            <button id="mobile-hamburger" class="hamburger"><i data-lucide="menu"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="pricing.html" aria-current="page">Integration Tiers</a>
+            <a href="contact.html">Contact</a>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 0; padding-bottom: 4px;">
+                <a href="contact.html" class="btn btn-primary">Project Enquiry</a>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 35px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2011');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Integration Tiers & Service Engagements</h1>
+                <p>Transparent engineering scopes, flexible system integration models, and 24/7 mission-critical plant automation support SLAs.</p>
+                <div class="hero-btns">
+                    <a href="#plans" class="btn btn-primary">View Engagement Tiers</a>
+                    <a href="#platform-matrix" class="btn btn-secondary">Platform Compatibility</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HARDWARE PLATFORMS SECTION -->
+        <section class="reveal" data-animation="fade-up" style="padding: 100px 0;">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div class="mobile-center-text">
+                    <span style="color: var(--secondary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px;">Platform Expertise</span>
+                    <h2 style="font-size: 2.3rem; margin: 10px 0 24px 0;">Supported Hardware & Control Ecosystems</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem;">We deliver vendor-neutral, best-in-class integration across all major industrial automation manufacturers. Our team is certified across leading programmable logic controllers, industrial robots, and enterprise SCADA suites.</p>
+                </div>
+                <div class="grid grid-responsive" style="gap: 20px;">
+                    <div class="card" style="padding: 24px; text-align: left; align-items: flex-start;">
+                        <i data-lucide="cpu" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                        <h4>Rockwell Automation / Allen-Bradley</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">ControlLogix, GuardLogix, CompactLogix, Studio 5000.</p>
+                    </div>
+                    <div class="card" style="padding: 24px; text-align: left; align-items: flex-start;">
+                        <i data-lucide="cpu" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                        <h4>Siemens SIMATIC Platform</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">S7-1500, S7-1200, ET 200SP, TIA Portal V18/19.</p>
+                    </div>
+                    <div class="card" style="padding: 24px; text-align: left; align-items: flex-start;">
+                        <i data-lucide="bot" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                        <h4>Robotics & Machine Vision</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Fanuc, KUKA, ABB, Yaskawa, Cognex 2D/3D Vision.</p>
+                    </div>
+                    <div class="card" style="padding: 24px; text-align: left; align-items: flex-start;">
+                        <i data-lucide="server" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                        <h4>SCADA & IIoT Protocols</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Ignition, Wonderware, MQTT Sparkplug B, OPC UA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIELDBUS PROTOCOLS / MATRIX SECTION -->
+        <section id="platform-matrix" class="reveal" data-animation="zoom-in"
+            style="background: var(--card); padding: 100px 0;">
+            <div class="container">
+                <div class="section-title">
+                    <p>DETERMINISTIC NETWORKING</p>
+                    <h2>Industrial Fieldbus & Communication Protocols</h2>
+                </div>
+                <div class="color-swatch-grid">
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="network"></i></div>
+                        <strong>EtherNet/IP</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">CIP Safety & Motion</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="network"></i></div>
+                        <strong>PROFINET</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">IRT & PROFIsafe</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="network"></i></div>
+                        <strong>EtherCAT</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">Sub-ms Determinism</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="network"></i></div>
+                        <strong>Modbus TCP</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">Process Instrumentation</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="radio"></i></div>
+                        <strong>MQTT / Sparkplug</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">IIoT & Cloud Gateway</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="database"></i></div>
+                        <strong>OPC UA</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">Secure Interoperability</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="layers"></i></div>
+                        <strong>IO-Link</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">Smart Sensor Diagnostics</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-box"><i data-lucide="shield"></i></div>
+                        <strong>AS-Interface</strong>
+                        <p style="font-size: 0.75rem; opacity: 0.7;">Safety At Work</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px; opacity: 0.8; font-size: 0.95rem;">
+                    * All architectures engineered with redundant ring topologies (DLR / MRP), managed Stratix/Scalance switches, and robust cyber-physical segmentation (Purdue Model / ISA-95).
+                </p>
+            </div>
+        </section>
+
+        <!-- ESTIMATION / VOLUME TIERS -->
+        <section id="plans" style="padding-top: 100px;">
+            <div class="container">
+                <div class="section-title">
+                    <p>TRANSPARENT ENGAGEMENT</p>
+                    <h2>System Integration & Service Models</h2>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Programming & Logic Optimization -->
+                    <div class="pricing-card">
+                        <div class="pricing-header-content">
+                            <h3>Logic & Code Optimization</h3>
+                            <p style="opacity: 0.7;">Ideal for existing cells needing cycle time speedups or bug fixes.</p>
+                        </div>
+                        <div class="price">Sprint Model<span> / fixed milestone</span></div>
+                        <ul class="features-list">
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> PLC Logic Audit & Refactoring</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> HMI Screen Polish & Alarm Rationalization</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Servo Motion Cam Curve Optimization</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Remote VPN Diagnostics Setup</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Detailed Engineering Change Log</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Enquire For Logic Optimization</a>
+                    </div>
+
+                    <!-- Turnkey System Integration -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="pricing-header-content">
+                            <h3>Turnkey System Integration</h3>
+                            <p style="opacity: 0.7;">Complete ground-up line automation, robotics & SCADA.</p>
+                        </div>
+                        <div class="price">Turnkey Project<span> / milestone-based</span></div>
+                        <ul class="features-list">
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Full Functional Design Specification (FDS)</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> UL 508A Custom Control Panel Fabrication</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Multi-Robot & Vision System Coordination</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> 100% Digital Twin Emulation & FAT</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> On-Site SAT & 24/7 Go-Live Commissioning</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%;">Discuss Turnkey Project</a>
+                    </div>
+
+                    <!-- 24/7 SLA & Enterprise Support -->
+                    <div class="pricing-card">
+                        <div class="pricing-header-content">
+                            <h3>Enterprise 24/7 Support SLA</h3>
+                            <p style="opacity: 0.7;">Continuous mission-critical facility uptime protection.</p>
+                        </div>
+                        <div class="price">Annual SLA<span> / dedicated retainers</span></div>
+                        <ul class="features-list">
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> 24/7/365 Emergency Dispatch Callout</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Guaranteed &lt; 15-Min Remote Response</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Quarterly Preventative Code & Safety Audits</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Disaster Recovery & Automated PLC Backups</li>
+                            <li><i data-lucide="check" style="color: var(--secondary);"></i> Dedicated Senior Automation Specialist</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Contact Enterprise SLA Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="reveal" data-animation="fade-right" style="background: var(--card); padding: 100px 0;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 60px;">Automation & Integration FAQ</h2>
+                <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 16px;">
+                    <details
+                        style="background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 0 18px;">
+                        <summary style="padding: 18px 0; cursor: pointer; font-weight: 700;">How do you estimate turnkey automation project costs?
+                        </summary>
+                        <p style="opacity: 0.7; padding: 0 0 18px 0;">We conduct a detailed preliminary review of your User Requirements Specification (URS), calculate I/O counts, servo/drive requirements, robotics kinematics, and control panel scale, then provide a transparent, fixed-scope milestone proposal.</p>
+                    </details>
+                    <details
+                        style="background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 0 18px;">
+                        <summary style="padding: 18px 0; cursor: pointer; font-weight: 700;">Do you supply complete electrical schematics and source code upon project completion?
+                        </summary>
+                        <p style="opacity: 0.7; padding: 0 0 18px 0;">Yes. We believe in complete client transparency. You receive 100% unlocked PLC/HMI/SCADA source code, fully commented IEC 61131-3 logic, AutoCAD Electrical panel drawings, and bill of materials (BOM) without proprietary lock-in.</p>
+                    </details>
+                    <details
+                        style="background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 0 18px;">
+                        <summary style="padding: 18px 0; cursor: pointer; font-weight: 700;">How does your team guarantee minimal downtime during on-site commissioning?
+                        </summary>
+                        <p style="opacity: 0.7; padding: 0 0 18px 0;">We utilize digital twin simulation and hardware-in-the-loop (HIL) FAT testing at our facility to debug 95%+ of logical and communication exceptions prior to stepping foot on your factory floor.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 20px;">
+                        <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                        <span>AUTOMA</span>
+                    </a>
+                    <p style="opacity: 0.7; margin-bottom: 20px;">Turnkey industrial automation, mission-critical PLC programming, enterprise SCADA telemetry, and robotics integration for global manufacturing.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Capabilities</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="services.html">PLC Programming</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">SCADA & Telemetry</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">Robotics Integration</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Standards & Compliance</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="#">UL 508A Certified</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#">IEC 61131-3 & IEC 61508</a></li>
+                        <li><a href="#">ISO 13849 Safety Standards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Automation Technical Brief</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Receive engineering whitepapers, SCADA architecture guides, and PLC optimization strategies.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Work email address" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOMA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

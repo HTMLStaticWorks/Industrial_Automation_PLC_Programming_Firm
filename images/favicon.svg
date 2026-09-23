@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="automaCpuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#0F172A" />
+  <!-- Outer chip boundary -->
+  <rect x="7" y="7" width="18" height="18" rx="3" fill="none" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Inner core -->
+  <rect x="12" y="12" width="8" height="8" rx="1.5" fill="url(#automaCpuGrad)" />
+  <!-- Pins -->
+  <line x1="11" y1="3" x2="11" y2="7" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="16" y1="3" x2="16" y2="7" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="21" y1="3" x2="21" y2="7" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="11" y1="25" x2="11" y2="29" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="16" y1="25" x2="16" y2="29" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="21" y1="25" x2="21" y2="29" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="3" y1="11" x2="7" y2="11" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="3" y1="16" x2="7" y2="16" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="3" y1="21" x2="7" y2="21" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="25" y1="11" x2="29" y2="11" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="25" y1="16" x2="29" y2="16" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="25" y1="21" x2="29" y2="21" stroke="url(#automaCpuGrad)" stroke-width="2" stroke-linecap="round" />
+</svg>

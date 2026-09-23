@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | AUTOMA - PLC Programming & SCADA Systems</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="Explore AUTOMA industrial automation engineering services including PLC programming, SCADA & plant telemetry architectures, multi-axis robotics integration, and UL 508A control panel builds.">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                <span>AUTOMA</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html" aria-current="page">Services</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="pricing.html">Integration Tiers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                <button id="rtl-toggle" class="btn btn-secondary"
+                    style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
+                <a href="contact.html" class="btn btn-primary" style="padding: 8px 16px;">Project Enquiry</a>
+            </div>
+            <button id="mobile-hamburger" class="hamburger"><i data-lucide="menu"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="pricing.html">Integration Tiers</a>
+            <a href="contact.html">Contact</a>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 0; padding-bottom: 4px;">
+                <a href="contact.html" class="btn btn-primary">Project Enquiry</a>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 35px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary"
+                    style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary"
+                    style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2074');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Industrial Automation & Systems Engineering Services</h1>
+                <p>Delivering high-integrity PLC programming, enterprise SCADA telemetry, industrial robotics cells, and
+                    certified control panel fabrication for continuous operations.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Request Engineering Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: PLC PROGRAMMING -->
+        <section class="reveal" data-animation="fade-left" style="padding: 100px 0;">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div class="mobile-center-text">
+                    <span
+                        style="color: var(--secondary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px;">Core
+                        Expertise</span>
+                    <h2 style="font-size: 2.5rem; margin: 10px 0 24px 0;">PLC Programming & Controller Architecture</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem; line-height: 1.8;">Our software engineers develop robust,
+                        standardized control software following IEC 61131-3 paradigms (Ladder Diagram, Structured Text,
+                        Function Block, Sequential Function Chart). We architect fault-tolerant logic and SIL safety
+                        code that keeps machines running at optimal takt times.</p>
+                </div>
+                <div
+                    style="background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;"><i
+                                data-lucide="check" style="color: var(--secondary);"></i>
+                            <strong>Rockwell Automation / Allen-Bradley</strong> - ControlLogix, CompactLogix,
+                            GuardLogix Safety
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;"><i
+                                data-lucide="check" style="color: var(--secondary);"></i>
+                            <strong>Siemens SIMATIC Platform</strong> - S7-1500, S7-1200, Fail-Safe CPUs & TIA Portal
+                            V18/19
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;"><i
+                                data-lucide="check" style="color: var(--secondary);"></i>
+                            <strong>Beckhoff TwinCAT 3 & PC-Based Control</strong> - Real-time EtherCAT deterministic
+                            motion
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><i data-lucide="check"
+                                style="color: var(--secondary);"></i>
+                            <strong>Schneider Electric Modicon & Omron Sysmac</strong> - Process automation & high-speed
+                            packaging
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SCADA SYSTEMS & TELEMETRY -->
+        <section class="reveal" data-animation="fade-right" style="background: var(--card); padding: 100px 0;">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"
+                        alt="SCADA Operation Center" style="width: 100%; display: block;">
+                </div>
+                <div class="mobile-center-text" style="padding-left: 0;">
+                    <span
+                        style="color: var(--secondary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px;">Plant-Wide
+                        Telemetry</span>
+                    <h2 style="font-size: 2.5rem; margin: 10px 0 24px 0;">SCADA Systems & HMI Visualization</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem; line-height: 1.8;">We architect distributed Supervisory
+                        Control and Data Acquisition (SCADA) systems that empower plant managers with real-time
+                        operational metrics, situational awareness, ISA-18.2 alarm management, and cloud-connected IIoT
+                        telemetry.</p>
+                    <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span
+                            style="background: var(--bg); border: 1px solid var(--border); padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Ignition
+                            by Inductive Automation</span>
+                        <span
+                            style="background: var(--bg); border: 1px solid var(--border); padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">AVEVA
+                            Wonderware System Platform</span>
+                        <span
+                            style="background: var(--bg); border: 1px solid var(--border); padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">FactoryTalk
+                            View SE/ME</span>
+                        <span
+                            style="background: var(--bg); border: 1px solid var(--border); padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">MQTT
+                            / Sparkplug B & SQL Historians</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ROBOTICS & MOTION -->
+        <section class="reveal" data-animation="zoom-in" style="padding: 100px 0; text-align: center;">
+            <div class="container">
+                <span
+                    style="color: var(--secondary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px;">Kinematics
+                    & Automation</span>
+                <h2 style="font-size: 2.5rem; margin: 10px 0 40px 0;">Robotics Integration & Motion Control</h2>
+                <div class="grid grid-flex">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=600"
+                            alt="Robotics Integration" class="card-img">
+                        <i data-lucide="bot" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>6-Axis & Delta Robotics</h3>
+                        <p>End-to-end integration for Fanuc, ABB, KUKA, and Yaskawa robots in palletizing, welding, and
+                            machine tending.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=600"
+                            alt="Machine Vision Guidance" class="card-img">
+                        <i data-lucide="scan" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>2D/3D Machine Vision Guidance</h3>
+                        <p>Cognex, Keyence, and OpenCV vision systems for robotic picking, high-speed part inspection,
+                            and OCR barcode verification.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJooE3xAE4cTL292NGKeFPB1ZJWJZ4lPoPXeX7fas62Q&s=10"
+                            alt="Multi-Axis Servo Motion" class="card-img">
+                        <i data-lucide="activity" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Multi-Axis Servo Motion</h3>
+                        <p>Precision cam profiling, electronic gearing, and synchronized torque control using Kinetix
+                            and SINAMICS drives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CONTROL PANELS & SAFETY -->
+        <section class="reveal" data-animation="fade-in"
+            style="background: var(--primary); color: white; padding: 100px 0;">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div class="mobile-center-text">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">UL 508A Control Panels & Functional Safety</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 30px;">From custom AutoCAD Electrical
+                        schematics and thermal load modeling to UL 508A certified enclosure fabrication, our panel
+                        engineering shop adheres strictly to NFPA 70/79 and ISO 13849 machine safety standards.</p>
+                    <a href="contact.html" class="btn btn-secondary">Request Panel Engineering Specs</a>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 0; border-radius: 20px; text-align: center; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=800"
+                        alt="Control Panel Inspection" class="card-img"
+                        style="margin-bottom: 0; border-radius: 0; height: 350px;">
+                    <div style="padding: 24px;">
+                        <h3 style="margin-top: 0; color: white;">UL 508A Certified & FAT Verified</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: INDUSTRY SECTORS -->
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <p>Industries We Serve</p>
+                    <h2>Mission-Critical Automation Across Global Sectors</h2>
+                </div>
+                <div class="grid grid-responsive" style="gap: 40px;">
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="cpu" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Automotive & EV Manufacturing</h2>
+                        <p style="margin-bottom: 24px;">Robotic BIW welding lines, battery module assembly automation,
+                            powertrain test benches, and synchronized automated guided vehicle (AGV) dispatch.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Sub-Second Takt Time Synchronization</li>
+                            <li><i data-lucide="check" size="16"></i> GuardLogix / Safety Integrated CPUs</li>
+                            <li><i data-lucide="check" size="16"></i> 100% Traceability & Vision QC</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Enquire For Automotive</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="utensils" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Food & Beverage Processing</h2>
+                        <p style="margin-bottom: 24px;">ISA-88 compliant recipe batch management, sanitary CIP/SIP
+                            automation, high-speed case packing, and end-of-line robotic palletizing.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Automated Batch Traceability & Historian</li>
+                            <li><i data-lucide="check" size="16"></i> Stainless IP69K Washdown Enclosures</li>
+                            <li><i data-lucide="check" size="16"></i> FDA 21 CFR Part 11 Audit Logging</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Enquire For F&B</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="droplet" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Water & Wastewater Utilities</h2>
+                        <p style="margin-bottom: 24px;">Wide-area distributed telemetry, hot-standby redundant PLC
+                            pairs, remote lift-station cellular monitoring, and energy-optimized pumping algorithms.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Redundant Fiber & DNP3 Telemetry</li>
+                            <li><i data-lucide="check" size="16"></i> High-Availability Ignition SCADA Host</li>
+                            <li><i data-lucide="check" size="16"></i> EPA Compliance Data Reporting</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Enquire For Utilities</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="pill" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Pharmaceutical & Life Sciences</h2>
+                        <p style="margin-bottom: 24px;">GAMP 5 validated automation systems, cleanroom-rated motion
+                            control, high-speed blister packaging, and electronic batch records.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> IQ/OQ/PQ Validation Protocol Execution</li>
+                            <li><i data-lucide="check" size="16"></i> Secure Role-Based Access Control</li>
+                            <li><i data-lucide="check" size="16"></i> Precision Multi-Axis Dosing Controls</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Enquire For Pharma</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 20px;">
+                        <i data-lucide="cpu" style="color: var(--secondary);"></i>
+                        <span>AUTOMA</span>
+                    </a>
+                    <p style="opacity: 0.7; margin-bottom: 20px;">Turnkey industrial automation, mission-critical PLC
+                        programming, enterprise SCADA telemetry, and robotics integration for global manufacturing.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Capabilities</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="services.html">PLC Programming</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">SCADA & Telemetry</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html">Robotics Integration</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Standards & Compliance</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="#">UL 508A Certified</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#">IEC 61131-3 & IEC 61508</a></li>
+                        <li><a href="#">ISO 13849 Safety Standards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Automation Technical Brief</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Receive
+                        engineering whitepapers, SCADA architecture guides, and PLC optimization strategies.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Engineering work email" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOMA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
