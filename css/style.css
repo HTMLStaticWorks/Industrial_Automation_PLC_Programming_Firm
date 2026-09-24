@@ -514,6 +514,28 @@ body.auth-body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto;
+        padding: 70px 20px 50px;
+        background-position: center center;
+    }
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(7, 13, 24, 0.78) 0%, rgba(15, 26, 46, 0.68) 50%, rgba(7, 13, 24, 0.82) 100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 55px 16px 40px;
+        background-position: center center;
+    }
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(7, 13, 24, 0.80) 0%, rgba(15, 26, 46, 0.70) 50%, rgba(7, 13, 24, 0.85) 100%);
+    }
+}
+
 @media (max-width: 480px) {
     .hero-btns .btn {
         width: 100%;
@@ -661,6 +683,34 @@ section {
     align-items: center;
     justify-content: center;
     margin: 0 auto 16px auto;
+}
+
+.standards-img-box {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 16px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(217, 119, 6, 0.08);
+    border: 1px solid rgba(217, 119, 6, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.standards-card:hover .standards-img-box {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(217, 119, 6, 0.22);
+    border-color: var(--secondary);
+}
+
+.standards-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .standards-card .badge-pill {

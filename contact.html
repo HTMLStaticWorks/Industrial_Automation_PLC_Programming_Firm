@@ -38,6 +38,31 @@
             gap: 20px;
             border: 1px solid var(--border);
             width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        .info-card-text {
+            min-width: 0;
+            flex: 1;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .info-card-text h4 {
+            font-size: 0.85rem;
+            opacity: 0.65;
+            margin: 0 0 4px 0;
+            font-weight: 500;
+        }
+
+        .info-card-text p {
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.4;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         .icon-box {
@@ -49,6 +74,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .contact-form-container {
@@ -150,6 +176,20 @@
                 padding: 30px 20px;
             }
         }
+
+        @media (max-width: 640px) {
+            .info-card {
+                padding: 18px 16px;
+                gap: 14px;
+            }
+            .info-card .icon-box {
+                width: 44px;
+                height: 44px;
+            }
+            .info-card-text p {
+                font-size: 0.92rem;
+            }
+        }
     </style>
 </head>
 
@@ -246,23 +286,23 @@
             <div class="contact-info">
                 <div class="info-card">
                     <div class="icon-box"><i data-lucide="mail"></i></div>
-                    <div>
-                        <h4 style="font-size: 0.9rem; opacity: 0.6;">Direct Engineering Desk</h4>
-                        <p style="font-weight: 600;">projects@industrialautomation.com</p>
+                    <div class="info-card-text">
+                        <h4>Direct Engineering Desk</h4>
+                        <p><a href="mailto:projects@industrialautomation.com" style="color: inherit;">projects@industrialautomation.com</a></p>
                     </div>
                 </div>
                 <div class="info-card">
                     <div class="icon-box"><i data-lucide="phone"></i></div>
-                    <div>
-                        <h4 style="font-size: 0.9rem; opacity: 0.6;">24/7 Field Support Line</h4>
-                        <p style="font-weight: 600;">+1 (800) 555-AUTO</p>
+                    <div class="info-card-text">
+                        <h4>24/7 Field Support Line</h4>
+                        <p><a href="tel:+18005552886" style="color: inherit;">+1 (800) 555-AUTO</a></p>
                     </div>
                 </div>
                 <div class="info-card">
                     <div class="icon-box"><i data-lucide="map-pin"></i></div>
-                    <div>
-                        <h4 style="font-size: 0.9rem; opacity: 0.6;">Engineering Headquarters</h4>
-                        <p style="font-weight: 600;">750 Automation Parkway, Detroit, MI 48202</p>
+                    <div class="info-card-text">
+                        <h4>Engineering Headquarters</h4>
+                        <p>750 Automation Parkway, Detroit, MI 48202</p>
                     </div>
                 </div>
                 <div class="contact-social">

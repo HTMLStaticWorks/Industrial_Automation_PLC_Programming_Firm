@@ -85,8 +85,9 @@
         }
 
         .color-swatch-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
             margin-top: 30px;
         }
@@ -97,6 +98,9 @@
             border-radius: 12px;
             padding: 16px;
             text-align: center;
+            flex: 1 1 130px;
+            min-width: 125px;
+            max-width: 155px;
         }
 
         .swatch-box {
